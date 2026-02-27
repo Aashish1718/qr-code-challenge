@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  background-color: hsl(212, 45%, 89%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 32rem;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #00000000;
+}
+
+.bg-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card {
+  padding: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 18px;
+  box-shadow: 1rem 3em 4rem 0 #9999992f;
+  transition: transform 0.5s ease-in;
+  transform-origin: center;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0.7rem 2em 3rem 0 #99999930;
+}
+
+.card img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.text {
+  padding: 2.2rem 1.4rem;
+}
+
+.text h2 {
+  color: hsl(218, 44%, 22%);
+  margin-bottom: 1.5rem;
+}
+
+.text p {
+  color: hsl(216, 15%, 48%);
+  margin-bottom: 0.8rem;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .bg-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .bg-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 25em) {
+  /* html {
+    font-size: 50%;
+  } */
+  .card {
+    margin: 0 1em;
+  }
+}
